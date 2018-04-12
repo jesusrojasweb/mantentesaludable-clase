@@ -1,0 +1,23 @@
+.Servicios{
+	display: flex;
+	justify-content: center;
+	background: var(--bgP);
+	& .contenedor{
+		@apply --grid;
+		grid-template-columns: repeat(3, 1fr);
+		text-align: center;
+		padding: 6em 0;
+		& .item{
+			& .fa{
+				color: var(--verde);
+				font-size: 3.5rem;
+			}
+			& .title{
+				@apply --title;
+			}
+			& .descripcion{
+				@apply --text;
+			}
+		}
+	}
+}

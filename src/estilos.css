@@ -1,93 +1,161 @@
-:root{
-	--fuenteTitle: 'Ubuntu', system-ui;
-	--fuenteText: 'Montserrat', system-ui;
-	--verde: #4ec4ae;
-	--bgP: #eeeef0;
-	--bgS: #f5f5f5;
-	--colotText: #aeaeb0;
-	--colorTitle: #43474a;
-	--btn: {
-		background: var(--verde);
-		color: white;
-		font-family: var(--fuenteText);
-		padding: 1em 2em;
-		text-decoration: none;
-		border-radius: 5rem;
-	};
-}
-body{
-	font-family: 'Ubuntu';
-	font-family: 'Montserrat';
-	margin: 0;
-	padding: 0;
-}
-.Hero{
-	background: url('../img/bg.jpg') no-repeat center center;
-	background-size: cover;
+@import './variables.css';
+@import './header.css';
+@import './servicios.css';
+@custom-media --mobile (width <= 500px );
+@custom-media --tablet (width <= 780px );
+
+/* ----- Hero ------ */
+
+
+.Post-a{
+	background: var(--bgS);
+	padding: 8em 0;
+	display: flex;
+	justify-content: center;
 	& .contenedor{
-		background: color(black a(50%));
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		align-items: center;
-		padding: 8em 9em;
-		& .header{
-			& .navbar{
-				& .menu{
-					margin: 0;
-					display: flex;
-					& .item{
-						padding: 1em;
-						list-style: none;
-						& a{
-							color: white;
-							font-family: var(--fuenteText);
-							text-decoration: none;
-							text-transform: uppercase;
-						}
-					}
+		@apply --grid;
+		grid-gap: 10em;
+		& .item{
+			& .header{
+				height: 250px;
+				overflow: hidden;
+				& .img{
+					width: 100%;
+					vertical-align: top;
+				}
+			}
+			& .body{
+				& .title{
+					@apply --title;
+				}
+				& .meta{
+					@apply --text;
+					margin-bottom: 	3em;
+				}
+				& .btn{
+					@apply --btn;
 				}
 			}
 		}
-		& .title{
-			font-family: var(--fuenteTitle);
-			color: white;
-			font-size: 4rem;
-			text-transform: uppercase;
-			margin-bottom: 0;
+	}
+}
+.Destacado-a{
+	background: var(--bgP);
+	padding: 5em 8em;
+	@media (--mobile){
+		padding: 5em 2em;
+	}
+	& .title{
+		margin: 0;
+		@apply --title;
+		font-size: 2rem;
+		margin-bottom: 	1em;
+		& span{
+			color: var(--colotText);
+			font-size: 2.5rem;
 		}
-		& .subtitle{
-			font-family: var(--fuenteText);
-			color: white;
-			font-size: 1.5rem;
-			text-transform: uppercase;
-			font-weight: 500;
-			position: relative;
-			margin-bottom: 4em;
-			&:before{
-				content: '';
-				position: absolute;
-				width: 15%;
-				top: 50%;
-				left: -5em;
-				height: 2px;
-				background: white;
+	}
+	& .meta{
+		@apply --text;
+		margin-bottom: 	2em;
+	}
+	& .btn{
+		@apply --btn;
+		background: var(--colotText);
+	}
+}
+.Post-b{
+	display: flex;
+	justify-content: center;
+	background: var(--bgS);
+	padding: 5em 0;
+	& .contenedor{
+		@apply --grid;
+		grid-template-columns: repeat(3, 1fr);
+		& .item{
+			& .header{
+				height: 200px;
+				overflow: hidden;
+				& .img{
+					width: 100%;
+				}
 			}
-			&:after{
-				content: '';
-				position: absolute;
-				width: 15%;
-				top: 50%;
-				right: -5em;
-				height: 2px;
-				background: white;
+			& .body{
+				& .title{
+					@apply --title;
+				}
+				& .meta{
+					@apply --text;
+				}
+				& .btn{
+					color: var(--verde);
+					font-family: var(--fuenteText);
+					text-decoration: none;
+				}
 			}
 		}
-		& .btn{
-			@apply --btn;
-			text-transform: uppercase;
-			padding: 1em 3em;
-			font-size: 1.2rem;
+	}
+}
+.Recomendaciones{
+	padding: 3em 0 9em;
+	display: flex;
+	justify-content: center;
+	background: var(--bgP);
+	& .contenedor{
+		@apply --grid;
+		grid-gap: 8em;
+		& .item{
+			& .title{
+				@apply --title;
+				font-size: 1.5rem;
+				& span{
+					font-size: 2rem;
+					color: var(--colotText);
+					padding-right: .5em;
+				}
+			}
+			& .descripcion{
+				@apply --text;
+				margin-bottom: 3em;
+			}
+			& .btn{
+				@apply --btn;
+			}
 		}
+	}
+}
+.Destacado-b{
+	background: var(--bgS);
+	display: flex;
+	justify-content: center;
+	padding: 8em 0;
+	& .contenedor{
+		@apply --grid;
+		& .item{
+			& .img{
+				width: 100%;
+			}
+			& .title{
+				@apply --title;
+				font-size: 1.5rem;
+			}
+			& .meta{
+				@apply --text;
+				margin-bottom: 3em;
+			}
+			& .btn{
+				@apply --btn;
+				background: var(--colotText);
+			}
+		}
+	}
+}
+.footer{
+	background: var(--verde);
+	padding: 3em 2em;
+	& .copy{
+		margin: 0;
+		font-family: var(--fuenteText);
+		color: white;
 	}
 }

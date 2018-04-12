@@ -1,0 +1,92 @@
+.Hero{
+	background: url('../img/bg.jpg') no-repeat center center;
+	background-size: cover;
+	& .contenedor{
+		background: color(black a(50%));
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		padding: 8em 9em;
+		@media (--tablet){
+			padding: 8em 4em;
+		}
+		@media (--mobile){
+			padding: 8em 1em;
+		}
+		& .header{
+			& .navbar{
+				& .menu{
+					margin: 0;
+					display: flex;
+					@media (--mobile){
+						display: none;
+					}
+					& .item{
+						padding: 1em;
+						list-style: none;
+						& a{
+							color: white;
+							font-family: var(--fuenteText);
+							text-decoration: none;
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
+		}
+		& .title{
+			font-family: var(--fuenteTitle);
+			color: white;
+			font-size: 4rem;
+			text-transform: uppercase;
+			margin-bottom: 0;
+			@media (--tablet){
+				font-size: 3rem;
+			}
+			@media (--mobile){
+				font-size: 2rem;
+			}
+		}
+		& .subtitle{
+			font-family: var(--fuenteText);
+			color: white;
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			font-weight: 500;
+			position: relative;
+			margin-bottom: 4em;
+			&:before{
+				content: '';
+				position: absolute;
+				width: 15%;
+				top: 50%;
+				left: -5em;
+				height: 2px;
+				background: white;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				width: 15%;
+				top: 50%;
+				right: -5em;
+				height: 2px;
+				background: white;
+			}
+			@media (--tablet){
+				font-size: 1.2rem;
+			}
+			@media (--tablet){
+				font-size: 1rem;
+				margin-bottom: 2em;
+			}
+		}
+		& .btn{
+			@apply --btn;
+			text-transform: uppercase;
+			padding: 1em 3em;
+			font-size: 1.2rem;
+		}
+	}
+}
