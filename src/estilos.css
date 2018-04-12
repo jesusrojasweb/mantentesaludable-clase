@@ -1,0 +1,93 @@
+:root{
+	--fuenteTitle: 'Ubuntu', system-ui;
+	--fuenteText: 'Montserrat', system-ui;
+	--verde: #4ec4ae;
+	--bgP: #eeeef0;
+	--bgS: #f5f5f5;
+	--colotText: #aeaeb0;
+	--colorTitle: #43474a;
+	--btn: {
+		background: var(--verde);
+		color: white;
+		font-family: var(--fuenteText);
+		padding: 1em 2em;
+		text-decoration: none;
+		border-radius: 5rem;
+	};
+}
+body{
+	font-family: 'Ubuntu';
+	font-family: 'Montserrat';
+	margin: 0;
+	padding: 0;
+}
+.Hero{
+	background: url('../img/bg.jpg') no-repeat center center;
+	background-size: cover;
+	& .contenedor{
+		background: color(black a(50%));
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		padding: 8em 9em;
+		& .header{
+			& .navbar{
+				& .menu{
+					margin: 0;
+					display: flex;
+					& .item{
+						padding: 1em;
+						list-style: none;
+						& a{
+							color: white;
+							font-family: var(--fuenteText);
+							text-decoration: none;
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
+		}
+		& .title{
+			font-family: var(--fuenteTitle);
+			color: white;
+			font-size: 4rem;
+			text-transform: uppercase;
+			margin-bottom: 0;
+		}
+		& .subtitle{
+			font-family: var(--fuenteText);
+			color: white;
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			font-weight: 500;
+			position: relative;
+			margin-bottom: 4em;
+			&:before{
+				content: '';
+				position: absolute;
+				width: 15%;
+				top: 50%;
+				left: -5em;
+				height: 2px;
+				background: white;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				width: 15%;
+				top: 50%;
+				right: -5em;
+				height: 2px;
+				background: white;
+			}
+		}
+		& .btn{
+			@apply --btn;
+			text-transform: uppercase;
+			padding: 1em 3em;
+			font-size: 1.2rem;
+		}
+	}
+}
