@@ -1,0 +1,21 @@
+{
+  "name": "Mantente Saludable",
+  "version": "0.0.1",
+  "description": "Proyecto para demostrar mis habilidades de desarrollador Frontend",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jesus Rojas <jesusrojas.frontend@gmail.com> (http://jesusrojas.com.ve)",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "css-mqpacker": "^6.0.2",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-font-magician": "^2.1.1",
+    "postcss-import": "^11.1.0"
+  }
+}
