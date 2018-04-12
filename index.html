@@ -4,8 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Mantente Saludable</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="css/fontawesome-all.min.css">
-	<link rel="stylesheet" href="css/estilos.css">
+	<style>
+		@font-face{font-family:Montserrat;font-style:normal;font-weight:400;src:local("Montserrat Regular"),local(Montserrat-Regular),url(//fonts.gstatic.com/s/montserrat/v12/zhcz-_WihjSQC0oHJ9TCYFQlYEbsez9cZjKsNMjLOwM.eot#) format("eot"),url(//fonts.gstatic.com/s/montserrat/v12/zhcz-_WihjSQC0oHJ9TCYPk_vArhqVIZ0nv9q090hN8.woff2) format("woff2"),url(//fonts.gstatic.com/s/montserrat/v12/zhcz-_WihjSQC0oHJ9TCYBsxEYwM7FgeyaSgU71cLG0.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-weight:600;src:local("Montserrat SemiBold"),local(Montserrat-SemiBold),url(//fonts.gstatic.com/s/montserrat/v12/q2OIMsAtXEkOulLQVdSl08G3e9iX24ta7lLMfbqPFME.eot#) format("eot"),url(//fonts.gstatic.com/s/montserrat/v12/q2OIMsAtXEkOulLQVdSl06VlZKEoJGujTpfWnQT9bUY.woff2) format("woff2"),url(//fonts.gstatic.com/s/montserrat/v12/q2OIMsAtXEkOulLQVdSl024H_cQCpNmkmj7HsMzmiiM.woff) format("woff")}@font-face{font-family:Ubuntu;font-style:normal;font-weight:500;src:local("Ubuntu Medium"),local(Ubuntu-Medium),url(//fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoCjC3jsGyJ.eot#) format("eot"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoCjC3jsGyN.woff2) format("woff2"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoCjC3jsGyL.woff) format("woff")}@font-face{font-family:Ubuntu;font-style:normal;font-weight:700;src:local("Ubuntu Bold"),local(Ubuntu-Bold),url(//fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoCxCvjsGyJ.eot#) format("eot"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoCxCvjsGyN.woff2) format("woff2"),url(//fonts.gstatic.com/s/ubuntu/v11/4iCv6KVjbNBYlgoCxCvjsGyL.woff) format("woff")}body{font-family:Ubuntu;font-family:Montserrat;margin:0;padding:0}.Hero{background:url(../img/bg.jpg) no-repeat 50%;background-size:cover}.Hero .contenedor{background:#000;background:rgba(0,0,0,.5);display:flex;flex-direction:column;text-align:center;align-items:center;padding:8em 9em}.Hero .contenedor .header .navbar .menu{margin:0;display:flex}.Hero .contenedor .header .navbar .menu .item{padding:1em;list-style:none}.Hero .contenedor .header .navbar .menu .item a{color:#fff;font-family:Montserrat,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue;text-decoration:none;text-transform:uppercase}.Hero .contenedor .title{font-family:Ubuntu,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Droid Sans,Helvetica Neue;color:#fff;font-size:64px;font-size:4rem;text-transform:uppercase;margin-bottom:0}.Hero .contenedor .subtitle{font-family:Montserrat,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue;color:#fff;font-size:24px;font-size:1.5rem;text-transform:uppercase;font-weight:500;position:relative;margin-bottom:4em}.Hero .contenedor .subtitle:before{left:-5em}.Hero .contenedor .subtitle:after,.Hero .contenedor .subtitle:before{content:"";position:absolute;width:15%;top:50%;height:2px;background:#fff}.Hero .contenedor .subtitle:after{right:-5em}.Hero .contenedor .btn{background:#4ec4ae;color:#fff;font-family:Montserrat,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue;padding:1em 2em;text-decoration:none;border-radius:5rem;text-transform:uppercase;padding:1em 3em;font-size:19.2px;font-size:1.2rem}.Servicios{display:flex;justify-content:center;background:#eeeef0}.Servicios .contenedor{display:grid;grid-template-columns:1fr 1fr;grid-gap:3em;width:80%;grid-template-columns:repeat(3,1fr);text-align:center;padding:6em 0}.Servicios .contenedor .item .fa{color:#4ec4ae;font-size:56px;font-size:3.5rem}@media (max-width:780px){.Hero .contenedor{padding:8em 4em}.Hero .contenedor .title{font-size:3rem}.Hero .contenedor .subtitle{font-size:1.2rem;font-size:1rem;margin-bottom:2em}}@media (max-width:500px){.Hero .contenedor{padding:8em 1em}.Hero .contenedor .header .navbar .menu{display:none}.Hero .contenedor .title{font-size:2rem}.Servicios .contenedor{grid-template-columns:1fr}}
+	</style>
 </head>
 <body>
 	<section class="Hero">
@@ -49,7 +50,10 @@
 		<div class="contenedor">
 			<div class="item">
 				<div class="header">
-					<img src="img/carro.jpg" alt="carro" class="img">
+					<div class="loader">
+						<div class="circulo"></div>
+					</div>
+					<img data-src="img/carro.jpg" alt="carro" class="img b-lazy">
 				</div>
 				<div class="body">
 					<h2 class="title">Seguridad al conducir</h2>
@@ -59,7 +63,10 @@
 			</div>
 			<div class="item">
 				<div class="header">
-					<img src="img/playa.jpg" alt="playa" class="img">
+					<div class="loader">
+						<div class="circulo"></div>
+					</div>
+					<img data-src="img/playa.jpg" alt="playa" class="img b-lazy">
 				</div>
 				<div class="body">
 					<h2 class="title">Tomate un día de playa</h2>
@@ -78,7 +85,10 @@
 		<div class="contenedor">
 			<div class="item">
 				<div class="header">
-					<img src="img/atardecer.jpg" alt="atardercer" class="img">
+					<div class="loader">
+						<div class="circulo"></div>
+					</div>
+					<img data-src="img/atardecer.jpg" alt="atardercer" class="img b-lazy">
 				</div>
 				<div class="body">
 					<h3 class="title">Disfruta los atardeceres</h3>
@@ -88,7 +98,10 @@
 			</div>
 			<div class="item">
 				<div class="header">
-					<img src="img/paraguas.jpg" alt="paraguas" class="img">
+					<div class="loader">
+						<div class="circulo"></div>
+					</div>
+					<img data-src="img/paraguas.jpg" alt="paraguas" class="img b-lazy">
 				</div>
 				<div class="body">
 					<h3 class="title">La lluvia es increíble</h3>
@@ -98,7 +111,10 @@
 			</div>
 			<div class="item">
 				<div class="header">
-					<img src="img/correr.jpg" alt="correr" class="img">
+					<div class="loader">
+						<div class="circulo"></div>
+					</div>
+					<img data-src="img/correr.jpg" alt="correr" class="img b-lazy">
 				</div>
 				<div class="body">
 					<h3 class="title">Agradable a la vista</h3>
@@ -125,7 +141,10 @@
 	<section class="Destacado-b">
 		<div class="contenedor">
 			<div class="item">
-				<img src="img/foto.jpg" alt="foto" class="img">
+				<div class="loader">
+					<div class="circulo"></div>
+				</div>
+				<img data-src="img/foto.jpg" alt="foto" class="img b-lazy">
 			</div>
 			<div class="item">
 				<h2 class="title">Tomate fotos para el autoestima</h2>
@@ -137,5 +156,10 @@
 	<footer class="footer">
 		<p class="copy"><strong>Jesús Rojas</strong> &copy; copyright 2018</p>
 	</footer>
+	<link rel="stylesheet" href="css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="css/estilos.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/blazy.min.js"></script>
+	<script src="js/index.js"></script>
 </body>
 </html>

@@ -6,7 +6,60 @@
 
 /* ----- Hero ------ */
 
-
+.b-lazy{
+	opacity: 0;
+}
+.b-loaded{
+	opacity: 1;
+	animation: aparecer 1s;
+	z-index: 2000;
+}
+.loader{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	& .circulo{
+		width: 100%;
+		height: 100%;
+		top: calc(50% - 40px);
+		right: calc(50% - 40px);
+		border-radius: 50%;
+		position: absolute;
+		box-sizing: border-box;
+		&:before{
+			content: '';
+			width: 100%;
+			height: 100%;
+			border: 8px solid #757575;
+			border-radius: 50%;
+			position: absolute;
+			box-sizing: border-box;
+		}
+		&:after{
+			content: '';
+			clip: rect(0px, 80px, 40px, 40px);
+			width: 100%;
+			height: 100%;
+			border: 8px solid #bbbbbb;
+			border-radius: 50%;
+			position: absolute;
+			box-sizing: border-box;
+			transform: rotate(-45deg);
+			animation: rotar 1s ease-in-out infinite;
+		}
+	}
+}
+.item{
+	& .header{
+		position: relative;
+		background: var(--bgP);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
 .Post-a{
 	background: var(--bgS);
 	padding: 8em 0;
@@ -135,6 +188,12 @@
 			& .img{
 				width: 100%;
 			}
+			&:nth-of-type(1){
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+			}
 			& .title{
 				@apply --title;
 				font-size: 1.5rem;
@@ -157,5 +216,26 @@
 		margin: 0;
 		font-family: var(--fuenteText);
 		color: white;
+	}
+}
+@keyframes aparecer{
+	0%{
+		transform: scale(.6);
+	}
+	50%{
+		transform: scale(1.5);
+	}
+	80%{
+		transform: scale(.9);
+	}
+	100%{
+		transform: scale(1);
+	}
+}@keyframes rotar{
+	0%{
+		transform: rotate(-45deg);
+	}
+	100%{
+		transform: rotate(315deg);
 	}
 }

@@ -32,7 +32,7 @@ gulp.task('css', ()=>{
     //cssnested,
     cssnext({browsers: ['> 5%', 'ie 8']}),
     mqpacker(),
-    //cssnano()
+    cssnano()
   ]
   return gulp.src('./src/estilos.css')
     //.pipe(sourcemaps.init())
