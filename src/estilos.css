@@ -1,0 +1,161 @@
+@import './variables.css';
+@import './header.css';
+@import './servicios.css';
+@custom-media --mobile (width <= 500px );
+@custom-media --tablet (width <= 780px );
+
+/* ----- Hero ------ */
+
+
+.Post-a{
+	background: var(--bgS);
+	padding: 8em 0;
+	display: flex;
+	justify-content: center;
+	& .contenedor{
+		@apply --grid;
+		grid-gap: 10em;
+		& .item{
+			& .header{
+				height: 250px;
+				overflow: hidden;
+				& .img{
+					width: 100%;
+					vertical-align: top;
+				}
+			}
+			& .body{
+				& .title{
+					@apply --title;
+				}
+				& .meta{
+					@apply --text;
+					margin-bottom: 	3em;
+				}
+				& .btn{
+					@apply --btn;
+				}
+			}
+		}
+	}
+}
+.Destacado-a{
+	background: var(--bgP);
+	padding: 5em 8em;
+	@media (--mobile){
+		padding: 5em 2em;
+	}
+	& .title{
+		margin: 0;
+		@apply --title;
+		font-size: 2rem;
+		margin-bottom: 	1em;
+		& span{
+			color: var(--colotText);
+			font-size: 2.5rem;
+		}
+	}
+	& .meta{
+		@apply --text;
+		margin-bottom: 	2em;
+	}
+	& .btn{
+		@apply --btn;
+		background: var(--colotText);
+	}
+}
+.Post-b{
+	display: flex;
+	justify-content: center;
+	background: var(--bgS);
+	padding: 5em 0;
+	& .contenedor{
+		@apply --grid;
+		grid-template-columns: repeat(3, 1fr);
+		& .item{
+			& .header{
+				height: 200px;
+				overflow: hidden;
+				& .img{
+					width: 100%;
+				}
+			}
+			& .body{
+				& .title{
+					@apply --title;
+				}
+				& .meta{
+					@apply --text;
+				}
+				& .btn{
+					color: var(--verde);
+					font-family: var(--fuenteText);
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+.Recomendaciones{
+	padding: 3em 0 9em;
+	display: flex;
+	justify-content: center;
+	background: var(--bgP);
+	& .contenedor{
+		@apply --grid;
+		grid-gap: 8em;
+		& .item{
+			& .title{
+				@apply --title;
+				font-size: 1.5rem;
+				& span{
+					font-size: 2rem;
+					color: var(--colotText);
+					padding-right: .5em;
+				}
+			}
+			& .descripcion{
+				@apply --text;
+				margin-bottom: 3em;
+			}
+			& .btn{
+				@apply --btn;
+			}
+		}
+	}
+}
+.Destacado-b{
+	background: var(--bgS);
+	display: flex;
+	justify-content: center;
+	padding: 8em 0;
+	& .contenedor{
+		@apply --grid;
+		& .item{
+			& .img{
+				width: 100%;
+			}
+			& .title{
+				@apply --title;
+				font-size: 1.5rem;
+			}
+			& .meta{
+				@apply --text;
+				margin-bottom: 3em;
+			}
+			& .btn{
+				@apply --btn;
+				background: var(--colotText);
+			}
+		}
+	}
+}
+.footer{
+	background: var(--verde);
+	padding: 3em 2em;
+	& .copy{
+		margin: 0;
+		font-family: var(--fuenteText);
+		color: white;
+	}
+}
